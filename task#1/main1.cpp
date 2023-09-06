@@ -3,13 +3,18 @@
 using namespace std;
 vector<int> delete_number(vector<int> dnVec, int deleter)
 {
-    vector<int> newVec(0);
     for (int i = 0; i < dnVec.size(); ++i)
     {
-        if(dnVec[i] != deleter) 
-        newVec.push_back(dnVec[i]);
+        if (dnVec[i] == deleter)
+        {
+            for(int j=i;j<dnVec.size()-1;++j)
+            {
+                swap(dnVec[j],dnVec[j+1]);
+            }
+            dnVec.pop_back();
+        }
     }
-    return newVec;
+    return dnVec;
 }
 void write_vec(vector<int> wVec)
 {
