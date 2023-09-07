@@ -16,10 +16,10 @@ int main()
     vector<int> storage(0);
     while (true)
     {
-        int x;
+        int number;
         cout << "input number: ";
-        cin >> x;
-        if (x == -1)
+        cin >> number;
+        if (number == -1)
         {
             write_vec(storage);
         }
@@ -29,7 +29,7 @@ int main()
             {
                 storage.erase(storage.begin());
             }
-            storage.push_back(x);
+            storage.push_back(number);
         }
     }
 }
